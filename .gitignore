@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+
+# build output
+out/
+dist/
+dist-x64/
+dist-x86/
+*.blockmap
+
+# caches
+.cache/
+
+# logs and temp
+*.log
+.tmp
+data/
+
+# installers & archives (published to GitHub Releases, not repo)
+installer/*.exe
+legacy/*.exe
+legacy/*.zip

@@ -1,1 +1,0 @@
-pyinstaller -D -w -i RandomNamesCall.ico RandomRollCall.py -n 随机点名 

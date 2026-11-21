@@ -1,0 +1,51 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "安装依赖 (pnpm install)",
+      "type": "shell",
+      "command": "pnpm install",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "开发运行 (pnpm dev)",
+      "type": "shell",
+      "command": "pnpm dev",
+      "group": "build",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "类型检查 (pnpm typecheck)",
+      "type": "shell",
+      "command": "pnpm typecheck",
+      "group": "test",
+      "problemMatcher": "$tsc"
+    },
+    {
+      "label": "构建 (pnpm build)",
+      "type": "shell",
+      "command": "pnpm build",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "打包安装包 (pnpm dist)",
+      "type": "shell",
+      "command": "pnpm dist",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "生成更新清单 (release)",
+      "type": "shell",
+      "command": "node tools/release.mjs",
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}

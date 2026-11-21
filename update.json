@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "latest": "0.2.0.0",
+  "publishedAt": "2026-11-22",
+  "notes": "Electron 重写版正式发布：13 种语言、64/32 位双架构安装包、多班级与在线名单、低配模式",
+  "downloads": [
+    {
+      "label": "Windows x64 安装包（114 MB）",
+      "url": "https://github.com/Rb9-1376/RandomNameCall/releases/download/v0.2.0.0/RandomNameCall-Setup-0.2.0.0-x64.exe"
+    },
+    {
+      "label": "Windows x86 安装包（92.4 MB）",
+      "url": "https://github.com/Rb9-1376/RandomNameCall/releases/download/v0.2.0.0/RandomNameCall-Setup-0.2.0.0-x86.exe"
+    }
+  ],
+  "sha256": "E8751242354A83122551E2CD9EF02E3C717569EF7C97C6DA1B0ACDB75CA9D6AA"
+}

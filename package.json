@@ -1,0 +1,86 @@
+{
+  "name": "random-name-call",
+  "version": "0.2.0",
+  "description": "课堂随机点名 · Electron 版",
+  "main": "out/main/index.js",
+  "author": {
+    "name": "Rb9-1376",
+    "email": "1709854716@qq.com"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "start": "electron-vite preview",
+    "typecheck": "vue-tsc --noEmit",
+    "dist": "electron-vite build && electron-builder --win nsis --x64",
+    "dist:dir": "electron-vite build && electron-builder --win --dir",
+    "release": "node tools/release.mjs"
+  },
+  "dependencies": {
+    "iconv-lite": "^0.7.3",
+    "jschardet": "^4.1.0",
+    "vue": "^3.5.46",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@vitejs/plugin-vue": "^6.0.11",
+    "electron": "^45.4.1",
+    "electron-builder": "^26.0.12",
+    "electron-vite": "^6.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.8",
+    "vue-tsc": "^3.3.14"
+  },
+  "build": {
+    "appId": "cn.rb9.randomrollcall",
+    "productName": "RandomNameCall",
+    "copyright": "Copyright © 2026 Rb9-1376",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "out/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "resources",
+        "to": "resources"
+      }
+    ],
+    "asar": true,
+    "compression": "maximum",
+    "electronDownload": {
+      "mirror": "https://npmmirror.com/mirrors/electron/"
+    },
+    "win": {
+      "icon": "resources/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "RandomNameCall-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "随机点名",
+      "deleteAppDataOnUninstall": false,
+      "installerLanguages": [
+        "zh_CN"
+      ],
+      "language": "2052"
+    }
+  }
+}
